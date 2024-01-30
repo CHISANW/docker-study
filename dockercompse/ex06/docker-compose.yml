@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql:8.0.33
+    restart: always
+    volumes:
+      - ./DATA:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root1234
+      - MYSQL_DATABASE=rootdb
+    ports:
+      - "3307:3306"
+
+
+volumes:
+  mysql-compose-volume:
